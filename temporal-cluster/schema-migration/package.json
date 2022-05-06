@@ -1,0 +1,21 @@
+{
+  "name": "schema-migration",
+  "version": "0.1.9",
+  "description": "The Database Schema setup and migration is a necessary step for Temporal to run. The `admin-tools` docker image of Temporal contains two binaries that help with this `temporal-cassandra-tool` and `temporal-sql-tool`. Since our cluster operates on Aurora PostgreSQL, we'd be using the `temporal-sql-tool` to run database schema setup and migrations. It's generally recommended to run this tool only when setting up the cluster for the first time or upgrading Temporal Servers. The following steps need to be taken for any upgrades:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline --stage dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "serverless": "^3.7.1",
+    "serverless-dotenv-plugin": "^3.12.2",
+    "serverless-offline": "^8.5.0"
+  }
+}

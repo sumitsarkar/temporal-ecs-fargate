@@ -1,0 +1,12 @@
+auth:
+  enabled: true # Temporal Web checks this first before reading your provider config
+  providers:
+    - label: 'Auth0 OIDC'                        # for internal use; in future may expose as button text
+      type: oidc                                  # for futureproofing; only oidc is supported today
+      issuer: https://test.auth0.com
+      client_id: ${AUTH0_CLIENT_ID}
+      client_secret: ${AUTH0_CLIENT_SECRET}
+      scope: openid profile email
+      audience: https://api.test.com/
+      callback_base_uri: http://temporal-dev-nlb-url.elb.eu-west-1.amazonaws.com
+      pass_id_token: false # adds ID token as 'authorization-extras' header with every request to server

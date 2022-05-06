@@ -1,0 +1,8 @@
+.idea
+.terraform
+**/.terraform
+*/ecr_image_url
+*/ecr_url
+*/repositories.json
+**/terraform.tfvars
+**/node_modules
