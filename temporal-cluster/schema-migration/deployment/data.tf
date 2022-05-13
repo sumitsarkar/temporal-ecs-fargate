@@ -4,7 +4,7 @@ data "terraform_remote_state" "cluster" {
   config = {
     bucket = "s3-bucket-for-state-backup"
     key    = "ecs-cluster/temporal-infra/${var.environment}/terraform.tfstate"
-    region = "eu-west-1"
+    region = "ap-south-1"
   }
 }
 
@@ -15,7 +15,7 @@ data "terraform_remote_state" "temporal_database" {
   config = {
     bucket = "s3-bucket-for-state-backup"
     key    = "ecs-cluster/temporal-infra/${var.environment}/services/temporal-database/terraform.tfstate"
-    region = "eu-west-1"
+    region = "ap-south-1"
   }
 }
 
@@ -25,7 +25,7 @@ data "terraform_remote_state" "temporal_services" {
   config = {
     bucket = "s3-bucket-for-state-backup"
     key    = "ecs-cluster/temporal-infra/${var.environment}/services/temporal-services/terraform.tfstate"
-    region = "eu-west-1"
+    region = "ap-south-1"
   }
 }
 

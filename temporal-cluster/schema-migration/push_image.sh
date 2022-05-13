@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Create repository if it doesn't exist
-aws configure set region eu-west-1
+aws configure set region ap-south-1
 aws ecr describe-repositories > repositories.json
 jq ".repositories[] | select(.repositoryName==\"$SERVICE_NAME\").repositoryUri" repositories.json
 export ECR_URL=$(jq ".repositories[] | select(.repositoryName==\"$SERVICE_NAME\").repositoryUri" repositories.json)

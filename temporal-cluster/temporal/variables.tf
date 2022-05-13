@@ -1,5 +1,5 @@
 variable "region" {
-  default = "eu-west-1"
+  default = "ap-south-1"
 }
 
 variable "public_subnets_ids" {
