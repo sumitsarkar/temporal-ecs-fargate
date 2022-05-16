@@ -9,11 +9,16 @@ resource "aws_ecs_cluster" "temporal_infrastructure" {
     name  = "containerInsights"
     value = "enabled"
   }
-  capacity_providers = ["FARGATE"]
+
   tags = {
     Cluster : var.cluster_name,
     Environment : var.environment,
   }
+}
+
+resource "aws_ecs_cluster_capacity_providers" "temporal_infrastructure" {
+  cluster_name = aws_ecs_cluster.temporal_infrastructure.name
+  capacity_providers = ["FARGATE"]
 }
 
 resource "aws_lb" "network_load_balancer" {

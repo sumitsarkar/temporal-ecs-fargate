@@ -1,2 +1,2 @@
-bucket = "s3-bucket-for-state-backup"
+bucket = "temporal-terraform"
 key    = "ecs-cluster/temporal-infra/dev/services/temporal-services/terraform.tfstate"

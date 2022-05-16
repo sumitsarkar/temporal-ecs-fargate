@@ -6,3 +6,4 @@
 */repositories.json
 **/terraform.tfvars
 **/node_modules
+**/.terraform.lock.hcl
